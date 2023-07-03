@@ -35,5 +35,15 @@ namespace Test
 
             BackColor = randomColor;
         }
+
+        private void btDisappear_Click(object sender, EventArgs e)
+        {
+            btDisappear.Visible = false;
+        }
+
+        private void btAppears_Click(object sender, EventArgs e)
+        {
+            btDisappear.Visible = true;
+        }
     }
 }

@@ -33,6 +33,8 @@
             btColorRed = new Button();
             btColorGreen = new Button();
             btColorRand = new Button();
+            btDisappear = new Button();
+            btAppears = new Button();
             SuspendLayout();
             // 
             // btColorBlue
@@ -85,11 +87,33 @@
             btColorRand.UseVisualStyleBackColor = true;
             btColorRand.Click += btColorRand_Click;
             // 
+            // btDisappear
+            // 
+            btDisappear.Location = new Point(12, 237);
+            btDisappear.Name = "btDisappear";
+            btDisappear.Size = new Size(229, 23);
+            btDisappear.TabIndex = 5;
+            btDisappear.Text = "Disparer";
+            btDisappear.UseVisualStyleBackColor = true;
+            btDisappear.Click += btDisappear_Click;
+            // 
+            // btAppears
+            // 
+            btAppears.Location = new Point(263, 237);
+            btAppears.Name = "btAppears";
+            btAppears.Size = new Size(229, 23);
+            btAppears.TabIndex = 6;
+            btAppears.Text = "Apparer";
+            btAppears.UseVisualStyleBackColor = true;
+            btAppears.Click += btAppears_Click;
+            // 
             // frMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(726, 402);
+            Controls.Add(btAppears);
+            Controls.Add(btDisappear);
             Controls.Add(btColorRand);
             Controls.Add(btColorGreen);
             Controls.Add(btColorRed);
@@ -108,5 +132,7 @@
         private Button btColorRed;
         private Button btColorGreen;
         private Button btColorRand;
+        private Button btDisappear;
+        private Button btAppears;
     }
 }
