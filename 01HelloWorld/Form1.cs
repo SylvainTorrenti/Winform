@@ -9,15 +9,30 @@ namespace _01HelloWorld
 
         private void btExit_Click(object sender, EventArgs e)
         {
-
-            DialogResult r8 = MessageBox.Show(this, "Confirmez vous la fermeture de l'application ?",
-                                               "Fermeture", MessageBoxButtons.YesNo);
+            const string message = "Confirmez vous la fermeture de l'application ?";
+            const string caption = "Fermeture";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question, 
+                                         MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult r8 = MessageBox.Show(this, "Confirmez vous la fermeture de l'application ?",
-                                               "Fermeture", MessageBoxButtons.YesNo);
+            const string message = "Confirmez vous la fermeture de l'application ?";
+            const string caption = "Fermeture";
+            var result = MessageBox.Show(message, caption, 
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question,
+                                         MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
