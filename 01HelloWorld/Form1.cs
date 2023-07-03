@@ -13,7 +13,7 @@ namespace _01HelloWorld
             const string caption = "Fermeture";
             var result = MessageBox.Show(message, caption,
                                          MessageBoxButtons.YesNo,
-                                         MessageBoxIcon.Question, 
+                                         MessageBoxIcon.Question,
                                          MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
@@ -25,7 +25,7 @@ namespace _01HelloWorld
         {
             const string message = "Confirmez vous la fermeture de l'application ?";
             const string caption = "Fermeture";
-            var result = MessageBox.Show(message, caption, 
+            var result = MessageBox.Show(message, caption,
                                          MessageBoxButtons.YesNo,
                                          MessageBoxIcon.Question,
                                          MessageBoxDefaultButton.Button2);
