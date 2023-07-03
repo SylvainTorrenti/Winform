@@ -93,7 +93,7 @@
             btDisappear.Name = "btDisappear";
             btDisappear.Size = new Size(229, 23);
             btDisappear.TabIndex = 5;
-            btDisappear.Text = "Disparer";
+            btDisappear.Text = "Disparition";
             btDisappear.UseVisualStyleBackColor = true;
             btDisappear.Click += btDisappear_Click;
             // 
@@ -103,7 +103,7 @@
             btAppears.Name = "btAppears";
             btAppears.Size = new Size(229, 23);
             btAppears.TabIndex = 6;
-            btAppears.Text = "Apparer";
+            btAppears.Text = "Apparition";
             btAppears.UseVisualStyleBackColor = true;
             btAppears.Click += btAppears_Click;
             // 
@@ -111,7 +111,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(726, 402);
+            ClientSize = new Size(720, 275);
             Controls.Add(btAppears);
             Controls.Add(btDisappear);
             Controls.Add(btColorRand);
