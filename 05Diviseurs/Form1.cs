@@ -1,13 +1,22 @@
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 namespace _05Diviseurs
 {
     public partial class frmDivisor : Form
     {
+        const string ERREURNB1 = "Vous n'avez pas entrez un nombre dans le premier champ";
+        const string ERREURNB2 = "Vous n'avez pas entrez un nombre dans le deuxiéme champ";
+        const string MESSAGE2 = "Le denominateur ne peut être 0";
         public frmDivisor()
         {
             InitializeComponent();
         }
 
         private void btResult_Click(object sender, EventArgs e)
+        {
+            divisor();
+        }
+        private void divisor()
         {
             int nb1;
             bool success = int.TryParse(tbNominator.Text, out nb1);
@@ -17,27 +26,44 @@ namespace _05Diviseurs
             }
             else
             {
-                MessageBox.Show("Vous n'avez pas entrez un nombre dans le premier champ");
-                tbNominator.Clear();
+                MessageBox.Show(ERREURNB1);
                 tbNominator.Focus();
             }
             int nb2;
             bool success2 = int.TryParse(tbDenominator.Text, out nb2);
-            if (success2)
+            if (success2 && (nb2 != 0))
             {
                 tbDenominator.Text = nb2.ToString();
             }
-            else
+            if (nb2 == 0)
             {
-                MessageBox.Show("Vous n'avez pas entrez un nombre dans le deuxiéme champ");
-                tbDenominator.Clear();
+                MessageBox.Show(MESSAGE2);
+            }
+            if (success2 != true)
+            {
+                MessageBox.Show(ERREURNB2);
                 tbDenominator.Focus();
             }
-            if (success && success2)
+            else
             {
-                lbResultN.Text = nb1.ToString();
-                lbResultD.Text = nb2.ToString();
+                var c = 1;
+                var a = nb1;
+                var b = nb2;
+
+                while (c != 0)
+                {
+                    c = a % b;
+                    a = b;
+                    b = c;
+                }
+
+                nb1 = nb1 / a;
+                nb2 = nb2 / a;
             }
+            lbResultN.Text = nb1.ToString();
+            lbResultD.Text = nb2.ToString();
         }
     }
+
+
 }

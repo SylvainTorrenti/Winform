@@ -9,11 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01HelloWorld", "01HelloWorl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02FenetreModale", "02FenetreModale\02FenetreModale.csproj", "{FAFBA4D4-A91D-47E7-BD22-606D54DCF653}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03Calculs", "03Calculs\03Calculs.csproj", "{606F10A9-E98C-4271-B3C2-A603017E396D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03Calculs", "03Calculs\03Calculs.csproj", "{606F10A9-E98C-4271-B3C2-A603017E396D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04Calculs(Controles)", "04Calculs(Controles)\04Calculs(Controles).csproj", "{8D9DC7AA-4E0E-4724-8832-13919840BB54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04Calculs(Controles)", "04Calculs(Controles)\04Calculs(Controles).csproj", "{8D9DC7AA-4E0E-4724-8832-13919840BB54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05Diviseurs", "05Diviseurs\05Diviseurs.csproj", "{39F0D99A-23FB-4E16-91FC-2F0372272339}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05Diviseurs", "05Diviseurs\05Diviseurs.csproj", "{39F0D99A-23FB-4E16-91FC-2F0372272339}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
