@@ -44,6 +44,7 @@
             tbNb1.Size = new Size(300, 23);
             tbNb1.TabIndex = 0;
             tbNb1.TextAlign = HorizontalAlignment.Right;
+            tbNb1.Enter += tbNb1_Enter;
             // 
             // tbNb2
             // 
@@ -52,6 +53,7 @@
             tbNb2.Size = new Size(300, 23);
             tbNb2.TabIndex = 1;
             tbNb2.TextAlign = HorizontalAlignment.Right;
+            tbNb2.Enter += tbNb2_Enter;
             // 
             // tbResult
             // 
@@ -105,6 +107,7 @@
             Controls.Add(tbNb1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMain";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Calcul";
             Load += frmMain_Load;
             ResumeLayout(false);
