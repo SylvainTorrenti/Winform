@@ -79,7 +79,7 @@
             btReset.Name = "btReset";
             btReset.Size = new Size(32, 23);
             btReset.TabIndex = 4;
-            btReset.Text = "CE";
+            btReset.Text = "&CE";
             btReset.UseVisualStyleBackColor = true;
             btReset.Click += btReset_Click;
             // 
