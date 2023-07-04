@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03Calculs", "03Calculs\03Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04Calculs(Controles)", "04Calculs(Controles)\04Calculs(Controles).csproj", "{8D9DC7AA-4E0E-4724-8832-13919840BB54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05Diviseurs", "05Diviseurs\05Diviseurs.csproj", "{39F0D99A-23FB-4E16-91FC-2F0372272339}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{8D9DC7AA-4E0E-4724-8832-13919840BB54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D9DC7AA-4E0E-4724-8832-13919840BB54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D9DC7AA-4E0E-4724-8832-13919840BB54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39F0D99A-23FB-4E16-91FC-2F0372272339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39F0D99A-23FB-4E16-91FC-2F0372272339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39F0D99A-23FB-4E16-91FC-2F0372272339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39F0D99A-23FB-4E16-91FC-2F0372272339}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
