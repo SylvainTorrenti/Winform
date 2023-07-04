@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02FenetreModale", "02Fenetr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03Calculs", "03Calculs\03Calculs.csproj", "{606F10A9-E98C-4271-B3C2-A603017E396D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04Calculs(Controles)", "04Calculs(Controles)\04Calculs(Controles).csproj", "{8D9DC7AA-4E0E-4724-8832-13919840BB54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{606F10A9-E98C-4271-B3C2-A603017E396D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{606F10A9-E98C-4271-B3C2-A603017E396D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{606F10A9-E98C-4271-B3C2-A603017E396D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D9DC7AA-4E0E-4724-8832-13919840BB54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D9DC7AA-4E0E-4724-8832-13919840BB54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D9DC7AA-4E0E-4724-8832-13919840BB54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D9DC7AA-4E0E-4724-8832-13919840BB54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

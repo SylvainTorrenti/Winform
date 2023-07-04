@@ -22,6 +22,28 @@ namespace _03Calculs
             tpResult.ShowAlways = true;
             tpResult.SetToolTip(this.btEgal, "Resultat");
 
+            ToolTip tbNb1 = new ToolTip();
+            tbNb1.AutoPopDelay = 0;
+            tbNb1.InitialDelay = 0;
+            tbNb1.ReshowDelay = 0;
+            tbNb1.ShowAlways = true;
+            tbNb1.SetToolTip(this.tbNb1, "Le 1er nombre");
+
+            ToolTip tbNb2 = new ToolTip();
+            tbNb2.AutoPopDelay = 0;
+            tbNb2.InitialDelay = 0;
+            tbNb2.ReshowDelay = 0;
+            tbNb2.ShowAlways = true;
+            tbNb2.SetToolTip(this.tbNb2, "Le 2eme nombre");
+
+            ToolTip tbResult = new ToolTip();
+            tbResult.AutoPopDelay = 0;
+            tbResult.InitialDelay = 0;
+            tbResult.ReshowDelay = 0;
+            tbResult.ShowAlways = true;
+            tbResult.SetToolTip(this.tbResult, "Le resultat");
+
+
         }
 
         private void btEgal_Click(object sender, EventArgs e)
@@ -35,11 +57,13 @@ namespace _03Calculs
 
         private void btReset_Click(object sender, EventArgs e)
         {
+            
             tbNb1.Clear();
             tbNb2.Clear();
             tbResult.Clear();
             tbNb1.Focus();
         }
+        
 
 
     }
