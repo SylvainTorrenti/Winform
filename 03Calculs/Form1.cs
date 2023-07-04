@@ -57,13 +57,13 @@ namespace _03Calculs
 
         private void btReset_Click(object sender, EventArgs e)
         {
-            
+
             tbNb1.Clear();
             tbNb2.Clear();
             tbResult.Clear();
             tbNb1.Focus();
         }
-        
+
 
 
     }
