@@ -111,7 +111,7 @@
             Controls.Add(lbName);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
-            Text = "Form1";
+            Text = "Age";
             ResumeLayout(false);
             PerformLayout();
         }
