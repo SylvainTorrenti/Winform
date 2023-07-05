@@ -2,10 +2,10 @@ using System.Text.RegularExpressions;
 
 namespace _09Age_settings_
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
         const string TITRE = "Age";
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
         }
@@ -52,7 +52,7 @@ namespace _09Age_settings_
 
         private void btClose_Click(object sender, EventArgs e)
         {
-            
+
             this.Close();
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace _09Age_settings_
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             lbName = new Label();
             lbBirthday = new Label();
             tbName = new TextBox();
@@ -99,7 +99,7 @@
             btYear.UseVisualStyleBackColor = true;
             btYear.Click += btYear_Click;
             // 
-            // Form1
+            // frmMain
             // 
             AcceptButton = btYear;
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -113,9 +113,9 @@
             Controls.Add(lbBirthday);
             Controls.Add(lbName);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form1";
+            Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Age";
             FormClosed += Form1_FormClosed;
             Load += Form1_Load;
             ResumeLayout(false);
