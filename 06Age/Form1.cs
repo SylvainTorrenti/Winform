@@ -6,5 +6,11 @@ namespace _06Age
         {
             InitializeComponent();
         }
+
+        private void btCalcul_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("bonjour","Age",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
     }
 }

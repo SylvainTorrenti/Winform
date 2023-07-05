@@ -92,6 +92,7 @@
             btCalcul.Text = "Calculer";
             btCalcul.TextAlign = ContentAlignment.MiddleRight;
             btCalcul.UseVisualStyleBackColor = true;
+            btCalcul.Click += btCalcul_Click;
             // 
             // frmMain
             // 
