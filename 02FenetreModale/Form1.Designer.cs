@@ -80,7 +80,7 @@
         #endregion
 
         private Label lbTitle;
-        private TextBox tbTitle;
         private Button btFrmFille;
+        public TextBox tbTitle;
     }
 }
