@@ -11,12 +11,17 @@ namespace _07Age_contrôles_
         }
         private void visible()
         {
-                    var regex = new Regex("^[0-9]{1,2}\\/[0-9]{1,2}\\/[0-9]{4}$");
+            var regex = new Regex("^[0-9]{1,2}\\/[0-9]{1,2}\\/[0-9]{4}$");
             if ((tbName.Text != "") && (tbBirthday.Text != ""))
             {
                 if (regex.IsMatch(tbBirthday.Text))
                 {
-                    btYear.Enabled = true;                  
+                    int result = DateTime.Compare(Convert.ToDateTime(tbBirthday.Text), DateTime.Now);
+                    if (result < 0)
+                    {
+
+                        btYear.Enabled = true;
+                    }
                 }
             }
         }

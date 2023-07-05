@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04Calculs(Controles)", "04C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05Diviseurs", "05Diviseurs\05Diviseurs.csproj", "{39F0D99A-23FB-4E16-91FC-2F0372272339}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06Age", "06Age\06Age.csproj", "{FCCF10F7-C7DD-4C90-BE8B-BC89588C8925}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06Age", "06Age\06Age.csproj", "{FCCF10F7-C7DD-4C90-BE8B-BC89588C8925}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07Age(contrôles)", "07Age(contrôles)\07Age(contrôles).csproj", "{6CA6AE1C-8279-45A8-AC2B-A280B3C05835}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{FCCF10F7-C7DD-4C90-BE8B-BC89588C8925}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCCF10F7-C7DD-4C90-BE8B-BC89588C8925}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCCF10F7-C7DD-4C90-BE8B-BC89588C8925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CA6AE1C-8279-45A8-AC2B-A280B3C05835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CA6AE1C-8279-45A8-AC2B-A280B3C05835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CA6AE1C-8279-45A8-AC2B-A280B3C05835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CA6AE1C-8279-45A8-AC2B-A280B3C05835}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
