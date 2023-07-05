@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07Age(contrôles)", "07Age(
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08Age(texteparDefaut)", "08Age(texteparDefaut)\08Age(texteparDefaut).csproj", "{D8FDC6E2-F402-4AE3-B5B7-81648DDB1DB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09Age(settings)", "09Age(settings)\09Age(settings).csproj", "{32F17EF4-411C-4471-96BB-75CE1B1380BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{D8FDC6E2-F402-4AE3-B5B7-81648DDB1DB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8FDC6E2-F402-4AE3-B5B7-81648DDB1DB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8FDC6E2-F402-4AE3-B5B7-81648DDB1DB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F17EF4-411C-4471-96BB-75CE1B1380BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F17EF4-411C-4471-96BB-75CE1B1380BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F17EF4-411C-4471-96BB-75CE1B1380BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F17EF4-411C-4471-96BB-75CE1B1380BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
