@@ -60,6 +60,7 @@
             tbName.CharacterCasing = CharacterCasing.Upper;
             tbName.Location = new Point(264, 32);
             tbName.Name = "tbName";
+            tbName.PlaceholderText = "Saisir le nom";
             tbName.Size = new Size(181, 23);
             tbName.TabIndex = 2;
             tbName.TextChanged += tbName_TextChanged;
@@ -68,6 +69,7 @@
             // 
             tbBirthday.Location = new Point(264, 83);
             tbBirthday.Name = "tbBirthday";
+            tbBirthday.PlaceholderText = "Saisir la date (jj/mm/aaaa)";
             tbBirthday.Size = new Size(181, 23);
             tbBirthday.TabIndex = 3;
             tbBirthday.TextChanged += tbBirthday_TextChanged;
@@ -86,6 +88,7 @@
             // 
             // btYear
             // 
+            btYear.Enabled = false;
             btYear.Image = Properties.Resources.runner_sport_run_olympics_olympic_athletics_icon_123810;
             btYear.ImageAlign = ContentAlignment.MiddleLeft;
             btYear.Location = new Point(283, 155);
@@ -110,6 +113,7 @@
             Controls.Add(lbName);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Age";
             ResumeLayout(false);
             PerformLayout();
