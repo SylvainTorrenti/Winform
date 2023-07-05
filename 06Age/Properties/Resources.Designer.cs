@@ -59,5 +59,25 @@ namespace _06Age.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap runner_sport_run_olympics_olympic_athletics_icon_123810 {
+            get {
+                object obj = ResourceManager.GetObject("runner_sport_run_olympics_olympic_athletics_icon_123810", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap star_alt_icon_34347 {
+            get {
+                object obj = ResourceManager.GetObject("star-alt-icon_34347", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

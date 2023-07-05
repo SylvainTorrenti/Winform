@@ -71,7 +71,7 @@
             // 
             // btClose
             // 
-            btClose.Image = (Image)resources.GetObject("btClose.Image");
+            btClose.Image = Properties.Resources.star_alt_icon_34347;
             btClose.ImageAlign = ContentAlignment.MiddleLeft;
             btClose.Location = new Point(55, 177);
             btClose.Name = "btClose";
@@ -83,7 +83,7 @@
             // 
             // btCalcul
             // 
-            btCalcul.Image = (Image)resources.GetObject("btCalcul.Image");
+            btCalcul.Image = Properties.Resources.runner_sport_run_olympics_olympic_athletics_icon_123810;
             btCalcul.ImageAlign = ContentAlignment.MiddleLeft;
             btCalcul.Location = new Point(460, 177);
             btCalcul.Name = "btCalcul";
@@ -96,8 +96,10 @@
             // 
             // frmMain
             // 
+            AcceptButton = btCalcul;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            CancelButton = btClose;
             ClientSize = new Size(674, 238);
             Controls.Add(btCalcul);
             Controls.Add(btClose);
@@ -118,8 +120,8 @@
         private Label lbName;
         private Label lbBirthday;
         private TextBox tbName;
-        private TextBox tbBirthday;
         private Button btClose;
         private Button btCalcul;
+        internal TextBox tbBirthday;
     }
 }

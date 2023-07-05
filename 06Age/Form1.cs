@@ -2,6 +2,9 @@ namespace _06Age
 {
     public partial class frmMain : Form
     {
+
+        const string TITRE = "Age";
+
         public frmMain()
         {
             InitializeComponent();
@@ -9,8 +12,11 @@ namespace _06Age
 
         private void btCalcul_Click(object sender, EventArgs e)
         {
-
-            MessageBox.Show("bonjour","Age",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            var today = DateTime.Today;
+            var birthday = Convert.ToDateTime(tbBirthday.Text);
+            var year = today.Year - birthday.Year;
+            MessageBox.Show(year.ToString(), TITRE, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
     }
 }
