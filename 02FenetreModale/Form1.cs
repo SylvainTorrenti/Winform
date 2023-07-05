@@ -9,27 +9,19 @@ namespace _02FenetreModale
 
         private void btFrmFille_Click(object sender, EventArgs e)
         {
-            //var result = MessageBox.Show("", tbTitle.Text,MessageBoxButtons.OKCancel);
-
-            //if (result == DialogResult.Cancel)
-            //{
-            //    tbTitle.Clear();
-            //}
-
-
-            frmFille frmFille = new frmFille();
+            using frmFille frmFille = new frmFille(); // remplace le dispose()
             frmFille.Text = this.tbTitle.Text;
+            DialogResult res = frmFille.ShowDialog();
 
-            if (frmFille.ShowDialog(this) == DialogResult.Cancel)
+            if (res == DialogResult.OK)
             {
-                this.tbTitle.Text = "";
+                tbTitle.Text = frmFille.tbFrmFille.Text;
             }
             else
             {
-                this.tbTitle.Text = tb
+                this.tbTitle.Text = string.Empty;
             }
-            frmFille.Dispose();
-        }
 
+        }
     }
 }

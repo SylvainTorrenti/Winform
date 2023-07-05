@@ -35,7 +35,7 @@
             // 
             // btYes
             // 
-            btYes.Location = new Point(178, 169);
+            btYes.Location = new Point(59, 169);
             btYes.Name = "btYes";
             btYes.Size = new Size(100, 46);
             btYes.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // btCancel
             // 
-            btCancel.Location = new Point(505, 169);
+            btCancel.Location = new Point(310, 169);
             btCancel.Name = "btCancel";
             btCancel.Size = new Size(100, 46);
             btCancel.TabIndex = 1;
@@ -55,17 +55,19 @@
             // 
             // tbFrmFille
             // 
-            tbFrmFille.Location = new Point(175, 76);
+            tbFrmFille.Location = new Point(22, 40);
             tbFrmFille.Name = "tbFrmFille";
             tbFrmFille.Size = new Size(430, 23);
             tbFrmFille.TabIndex = 2;
             // 
             // frmFille
             // 
+            AcceptButton = btYes;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Cyan;
-            ClientSize = new Size(748, 266);
+            CancelButton = btCancel;
+            ClientSize = new Size(461, 238);
             Controls.Add(tbFrmFille);
             Controls.Add(btCancel);
             Controls.Add(btYes);
@@ -79,6 +81,6 @@
 
         private Button btYes;
         private Button btCancel;
-        private TextBox tbFrmFille;
+        internal TextBox tbFrmFille;
     }
 }
