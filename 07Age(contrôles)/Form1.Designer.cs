@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             lbName = new Label();
             lbBirthday = new Label();
             tbName = new TextBox();
@@ -108,6 +109,7 @@
             Controls.Add(tbName);
             Controls.Add(lbBirthday);
             Controls.Add(lbName);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
