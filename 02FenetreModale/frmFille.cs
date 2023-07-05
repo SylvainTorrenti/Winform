@@ -19,13 +19,13 @@ namespace _02FenetreModale
 
         private void btYes_Click(object sender, EventArgs e)
         {
-            btYes.DialogResult = DialogResult.OK;
+            DialogResult = DialogResult.OK;
             this.Close();
         }
 
         private void btCancel_Click(object sender, EventArgs e)
         {
-            btCancel.DialogResult = DialogResult.Cancel;
+            DialogResult = DialogResult.Cancel;
             this.Close();
         }
     }
