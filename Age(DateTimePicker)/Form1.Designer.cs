@@ -86,7 +86,6 @@
             // 
             // btYear
             // 
-            btYear.Enabled = false;
             btYear.Image = Properties.Resources.runner_sport_run_olympics_olympic_athletics_icon_123810;
             btYear.ImageAlign = ContentAlignment.MiddleLeft;
             btYear.Location = new Point(293, 149);
