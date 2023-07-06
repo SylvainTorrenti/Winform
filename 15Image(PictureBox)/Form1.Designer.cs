@@ -122,7 +122,7 @@
             // 
             // pbImage
             // 
-            pbImage.Dock = DockStyle.Fill;
+            pbImage.InitialImage = null;
             pbImage.Location = new Point(0, 0);
             pbImage.Name = "pbImage";
             pbImage.Size = new Size(774, 211);
