@@ -63,6 +63,36 @@ namespace _12Image_Listbox_.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addition_sign_icon_icons_com_73100 {
+            get {
+                object obj = ResourceManager.GetObject("addition-sign_icon-icons.com_73100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_delete_exit_1577 {
+            get {
+                object obj = ResourceManager.GetObject("delete_delete_exit_1577", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap filesystems_garbage_full_670 {
+            get {
+                object obj = ResourceManager.GetObject("filesystems_garbage_full_670", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap photo_photography_image_picture_108525 {
             get {
                 object obj = ResourceManager.GetObject("photo-photography-image-picture_108525", resourceCulture);

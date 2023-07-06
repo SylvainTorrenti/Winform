@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             btImage = new Button();
             tbPath = new TextBox();
+            libPath = new ListBox();
+            btAdd = new Button();
+            btClear = new Button();
+            btDelete = new Button();
             SuspendLayout();
             // 
             // btImage
@@ -48,14 +52,66 @@
             tbPath.Location = new Point(60, 19);
             tbPath.Name = "tbPath";
             tbPath.ReadOnly = true;
-            tbPath.Size = new Size(753, 23);
+            tbPath.Size = new Size(636, 23);
             tbPath.TabIndex = 1;
+            // 
+            // libPath
+            // 
+            libPath.FormattingEnabled = true;
+            libPath.ItemHeight = 15;
+            libPath.Location = new Point(12, 52);
+            libPath.Name = "libPath";
+            libPath.Size = new Size(684, 229);
+            libPath.TabIndex = 2;
+            // 
+            // btAdd
+            // 
+            btAdd.Image = Properties.Resources.addition_sign_icon_icons_com_73100;
+            btAdd.ImageAlign = ContentAlignment.MiddleRight;
+            btAdd.Location = new Point(733, 52);
+            btAdd.Name = "btAdd";
+            btAdd.Size = new Size(112, 42);
+            btAdd.TabIndex = 3;
+            btAdd.Text = "Ajouter";
+            btAdd.TextAlign = ContentAlignment.MiddleLeft;
+            btAdd.UseVisualStyleBackColor = true;
+            btAdd.Click += btAdd_Click;
+            // 
+            // btClear
+            // 
+            btClear.Image = Properties.Resources.filesystems_garbage_full_670;
+            btClear.ImageAlign = ContentAlignment.MiddleRight;
+            btClear.Location = new Point(733, 239);
+            btClear.Name = "btClear";
+            btClear.Size = new Size(112, 42);
+            btClear.TabIndex = 4;
+            btClear.Text = "Vider";
+            btClear.TextAlign = ContentAlignment.MiddleLeft;
+            btClear.UseVisualStyleBackColor = true;
+            btClear.Click += btClear_Click;
+            // 
+            // btDelete
+            // 
+            btDelete.Image = Properties.Resources.delete_delete_exit_1577;
+            btDelete.ImageAlign = ContentAlignment.MiddleRight;
+            btDelete.Location = new Point(733, 141);
+            btDelete.Name = "btDelete";
+            btDelete.Size = new Size(112, 42);
+            btDelete.TabIndex = 5;
+            btDelete.Text = "Supprimer";
+            btDelete.TextAlign = ContentAlignment.MiddleLeft;
+            btDelete.UseVisualStyleBackColor = true;
+            btDelete.Click += btDelete_Click;
             // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(885, 325);
+            Controls.Add(btDelete);
+            Controls.Add(btClear);
+            Controls.Add(btAdd);
+            Controls.Add(libPath);
             Controls.Add(tbPath);
             Controls.Add(btImage);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -70,5 +126,9 @@
 
         private Button btImage;
         private TextBox tbPath;
+        private ListBox libPath;
+        private Button btAdd;
+        private Button btClear;
+        private Button btDelete;
     }
 }

@@ -121,4 +121,13 @@
   <data name="photo-photography-image-picture_108525" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\photo-photography-image-picture_108525.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="addition-sign_icon-icons.com_73100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addition-sign_icon-icons.com_73100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_delete_exit_1577" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_delete_exit_1577.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filesystems_garbage_full_670" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filesystems_garbage_full_670.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace _12Image_Listbox_
 {
     public partial class frmMain : Form
@@ -27,5 +29,20 @@ namespace _12Image_Listbox_
                 }
             }
         }
+
+        private void btAdd_Click(object sender, EventArgs e)
+        {
+            libPath.Items.Add(tbPath.Text);
+        }
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            libPath.Items.Remove(libPath.SelectedItem);
+        }
+        private void btClear_Click(object sender, EventArgs e)
+        {
+            libPath.Items.Clear();
+        }
+
+       
     }
 }
