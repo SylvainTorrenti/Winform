@@ -46,6 +46,7 @@
             btAge.Text = "Age";
             btAge.TextAlign = ContentAlignment.MiddleRight;
             btAge.UseVisualStyleBackColor = true;
+            btAge.Click += btAge_Click;
             // 
             // btCalcul
             // 

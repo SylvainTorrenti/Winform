@@ -11,5 +11,12 @@ namespace TousEnsemble
         {
 
         }
+
+        private void btAge_Click(object sender, EventArgs e)
+        {
+            using Age age = new Age();
+            age.ShowDialog();
+
+        }
     }
 }
