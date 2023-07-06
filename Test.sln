@@ -17,13 +17,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05Diviseurs", "05Diviseurs\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06Age", "06Age\06Age.csproj", "{FCCF10F7-C7DD-4C90-BE8B-BC89588C8925}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07Age(contrôles)", "07Age(contrôles)\07Age(contrôles).csproj", "{6CA6AE1C-8279-45A8-AC2B-A280B3C05835}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07Age(contrôles)", "07Age(contrôles)\07Age(contrôles).csproj", "{6CA6AE1C-8279-45A8-AC2B-A280B3C05835}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08Age(texteparDefaut)", "08Age(texteparDefaut)\08Age(texteparDefaut).csproj", "{D8FDC6E2-F402-4AE3-B5B7-81648DDB1DB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08Age(texteparDefaut)", "08Age(texteparDefaut)\08Age(texteparDefaut).csproj", "{D8FDC6E2-F402-4AE3-B5B7-81648DDB1DB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09Age(settings)", "09Age(settings)\09Age(settings).csproj", "{32F17EF4-411C-4471-96BB-75CE1B1380BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09Age(settings)", "09Age(settings)\09Age(settings).csproj", "{32F17EF4-411C-4471-96BB-75CE1B1380BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10Age(DateTimePicker)", "Age(DateTimePicker)\10Age(DateTimePicker).csproj", "{7A0A9F9B-F956-4B22-82B6-EACF6BAADC01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10Age(DateTimePicker)", "Age(DateTimePicker)\10Age(DateTimePicker).csproj", "{7A0A9F9B-F956-4B22-82B6-EACF6BAADC01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11Image", "11Image\11Image.csproj", "{EA9C9FD7-2C15-4A20-A2C1-D5B60EC42B60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12Image(Listbox)", "12Image(Listbox)\12Image(Listbox).csproj", "{2363B4B7-F611-4744-9298-FBA507929584}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13Imge(grisage-degrisage)", "13Imge(grisage-degrisage)\13Imge(grisage-degrisage).csproj", "{6C2D094C-DBFA-4265-8FD4-039F1E79324C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +81,18 @@ Global
 		{7A0A9F9B-F956-4B22-82B6-EACF6BAADC01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A0A9F9B-F956-4B22-82B6-EACF6BAADC01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A0A9F9B-F956-4B22-82B6-EACF6BAADC01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA9C9FD7-2C15-4A20-A2C1-D5B60EC42B60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA9C9FD7-2C15-4A20-A2C1-D5B60EC42B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA9C9FD7-2C15-4A20-A2C1-D5B60EC42B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA9C9FD7-2C15-4A20-A2C1-D5B60EC42B60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2363B4B7-F611-4744-9298-FBA507929584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2363B4B7-F611-4744-9298-FBA507929584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2363B4B7-F611-4744-9298-FBA507929584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2363B4B7-F611-4744-9298-FBA507929584}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C2D094C-DBFA-4265-8FD4-039F1E79324C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C2D094C-DBFA-4265-8FD4-039F1E79324C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C2D094C-DBFA-4265-8FD4-039F1E79324C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C2D094C-DBFA-4265-8FD4-039F1E79324C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
