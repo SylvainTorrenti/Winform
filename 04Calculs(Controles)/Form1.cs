@@ -95,5 +95,17 @@ namespace _04Calculs_Controles_
         {
             tbResult.Clear();
         }
+
+        private void tbNb1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '.')
+            {
+                e.KeyChar = ',';
+            }
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
