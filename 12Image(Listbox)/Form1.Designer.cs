@@ -1,6 +1,6 @@
 ﻿namespace _12Image_Listbox_
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,12 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            btImage = new Button();
+            tbPath = new TextBox();
+            SuspendLayout();
+            // 
+            // btImage
+            // 
+            btImage.Image = Properties.Resources.photo_photography_image_picture_108525;
+            btImage.Location = new Point(12, 12);
+            btImage.Name = "btImage";
+            btImage.Size = new Size(42, 34);
+            btImage.TabIndex = 0;
+            btImage.UseVisualStyleBackColor = true;
+            btImage.Click += btImage_Click;
+            // 
+            // tbPath
+            // 
+            tbPath.Location = new Point(60, 19);
+            tbPath.Name = "tbPath";
+            tbPath.ReadOnly = true;
+            tbPath.Size = new Size(753, 23);
+            tbPath.TabIndex = 1;
+            // 
+            // frmMain
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(885, 325);
+            Controls.Add(tbPath);
+            Controls.Add(btImage);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "frmMain";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Images";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button btImage;
+        private TextBox tbPath;
     }
 }
