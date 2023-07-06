@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13Imge(grisage-degrisage)",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14Image(listeSansDoublon)", "14Image(listeSansDoublon)\14Image(listeSansDoublon).csproj", "{63D876A7-273E-40B6-A76D-12C4EBCBAD8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15Image(PictureBox)", "15Image(PictureBox)\15Image(PictureBox).csproj", "{649C5B70-EA7B-4F48-9734-DDE05DBEEA1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{63D876A7-273E-40B6-A76D-12C4EBCBAD8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63D876A7-273E-40B6-A76D-12C4EBCBAD8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63D876A7-273E-40B6-A76D-12C4EBCBAD8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{649C5B70-EA7B-4F48-9734-DDE05DBEEA1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{649C5B70-EA7B-4F48-9734-DDE05DBEEA1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{649C5B70-EA7B-4F48-9734-DDE05DBEEA1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{649C5B70-EA7B-4F48-9734-DDE05DBEEA1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
