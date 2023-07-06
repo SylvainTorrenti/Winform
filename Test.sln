@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12Image(Listbox)", "12Image
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13Imge(grisage-degrisage)", "13Imge(grisage-degrisage)\13Imge(grisage-degrisage).csproj", "{6C2D094C-DBFA-4265-8FD4-039F1E79324C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14Image(listeSansDoublon)", "14Image(listeSansDoublon)\14Image(listeSansDoublon).csproj", "{63D876A7-273E-40B6-A76D-12C4EBCBAD8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{6C2D094C-DBFA-4265-8FD4-039F1E79324C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C2D094C-DBFA-4265-8FD4-039F1E79324C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C2D094C-DBFA-4265-8FD4-039F1E79324C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D876A7-273E-40B6-A76D-12C4EBCBAD8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D876A7-273E-40B6-A76D-12C4EBCBAD8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D876A7-273E-40B6-A76D-12C4EBCBAD8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D876A7-273E-40B6-A76D-12C4EBCBAD8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
