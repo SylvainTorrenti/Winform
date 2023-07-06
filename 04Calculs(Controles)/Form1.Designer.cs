@@ -55,6 +55,7 @@
             tbNb2.TabIndex = 1;
             tbNb2.TextAlign = HorizontalAlignment.Right;
             tbNb2.Enter += tbNb2_Enter;
+            tbNb2.KeyPress += tbNb2_KeyPress;
             // 
             // tbResult
             // 
