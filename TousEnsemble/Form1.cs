@@ -9,7 +9,8 @@ namespace TousEnsemble
 
         private void btImage_Click(object sender, EventArgs e)
         {
-
+            using Image image = new Image();
+            image.ShowDialog();
         }
 
         private void btAge_Click(object sender, EventArgs e)
