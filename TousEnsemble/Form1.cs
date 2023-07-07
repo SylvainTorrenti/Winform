@@ -18,5 +18,11 @@ namespace TousEnsemble
             age.ShowDialog();
 
         }
+
+        private void btCalcul_Click(object sender, EventArgs e)
+        {
+            using Calculer calculer = new Calculer();
+            calculer.ShowDialog();
+        }
     }
 }
