@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             tbNb1 = new TextBox();
             tbNb2 = new TextBox();
@@ -35,6 +36,7 @@
             lbAdition = new Label();
             btReset = new Button();
             btResult = new Button();
+            toolTip1 = new ToolTip(components);
             SuspendLayout();
             // 
             // tbNb1
@@ -44,6 +46,7 @@
             tbNb1.Size = new Size(300, 23);
             tbNb1.TabIndex = 0;
             tbNb1.TextAlign = HorizontalAlignment.Right;
+            toolTip1.SetToolTip(tbNb1, "Le 1er nombre");
             tbNb1.Enter += tbNb1_Enter;
             tbNb1.KeyPress += tbNb1_KeyPress;
             // 
@@ -54,6 +57,7 @@
             tbNb2.Size = new Size(300, 23);
             tbNb2.TabIndex = 1;
             tbNb2.TextAlign = HorizontalAlignment.Right;
+            toolTip1.SetToolTip(tbNb2, "Le 2eme nombre");
             tbNb2.Enter += tbNb2_Enter;
             tbNb2.KeyPress += tbNb2_KeyPress;
             // 
@@ -64,6 +68,7 @@
             tbResult.Size = new Size(300, 23);
             tbResult.TabIndex = 2;
             tbResult.TextAlign = HorizontalAlignment.Right;
+            toolTip1.SetToolTip(tbResult, "Le resultat");
             // 
             // lbAdition
             // 
@@ -82,6 +87,7 @@
             btReset.Size = new Size(32, 23);
             btReset.TabIndex = 4;
             btReset.Text = "&CE";
+            toolTip1.SetToolTip(btReset, "Reset");
             btReset.UseVisualStyleBackColor = true;
             btReset.Click += btReset_Click;
             // 
@@ -93,6 +99,7 @@
             btResult.Size = new Size(27, 23);
             btResult.TabIndex = 5;
             btResult.Text = "=";
+            toolTip1.SetToolTip(btResult, "Resultat");
             btResult.UseVisualStyleBackColor = true;
             btResult.Click += btResult_Click;
             // 
@@ -124,5 +131,6 @@
         private Label lbAdition;
         private Button btReset;
         private Button btResult;
+        private ToolTip toolTip1;
     }
 }

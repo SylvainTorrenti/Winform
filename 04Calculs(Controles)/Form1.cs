@@ -8,40 +8,7 @@ namespace _04Calculs_Controles_
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
-            ToolTip tpReset = new ToolTip();
-            tpReset.AutoPopDelay = 0;
-            tpReset.InitialDelay = 0;
-            tpReset.ReshowDelay = 0;
-            tpReset.ShowAlways = true;
-            tpReset.SetToolTip(this.btReset, "Reset");
 
-            ToolTip tpResult = new ToolTip();
-            tpResult.AutoPopDelay = 0;
-            tpResult.InitialDelay = 0;
-            tpResult.ReshowDelay = 0;
-            tpResult.ShowAlways = true;
-            tpResult.SetToolTip(this.btResult, "Resultat");
-
-            ToolTip tbNb1 = new ToolTip();
-            tbNb1.AutoPopDelay = 0;
-            tbNb1.InitialDelay = 0;
-            tbNb1.ReshowDelay = 0;
-            tbNb1.ShowAlways = true;
-            tbNb1.SetToolTip(this.tbNb1, "Le 1er nombre");
-
-            ToolTip tbNb2 = new ToolTip();
-            tbNb2.AutoPopDelay = 0;
-            tbNb2.InitialDelay = 0;
-            tbNb2.ReshowDelay = 0;
-            tbNb2.ShowAlways = true;
-            tbNb2.SetToolTip(this.tbNb2, "Le 2eme nombre");
-
-            ToolTip tbResult = new ToolTip();
-            tbResult.AutoPopDelay = 0;
-            tbResult.InitialDelay = 0;
-            tbResult.ReshowDelay = 0;
-            tbResult.ShowAlways = true;
-            tbResult.SetToolTip(this.tbResult, "Le resultat");
         }
 
         private void btResult_Click(object sender, EventArgs e)
@@ -102,6 +69,10 @@ namespace _04Calculs_Controles_
             {
                 e.KeyChar = ',';
             }
+            if (e.KeyChar == ',' && tbNb1.Text.Contains(','))
+            {
+                e.Handled =true;
+            }
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true;
@@ -113,6 +84,10 @@ namespace _04Calculs_Controles_
             if (e.KeyChar == '.')
             {
                 e.KeyChar = ',';
+            }
+            if ( e.KeyChar == ',' && tbNb1.Text.Contains(','))
+            {
+                e.Handled = true;
             }
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != (char)Keys.Back)
             {
