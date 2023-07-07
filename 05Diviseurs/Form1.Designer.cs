@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDivisor));
             lbNumerator = new Label();
             lbDeneminator = new Label();
@@ -41,6 +42,7 @@
             lbLine = new Label();
             lbResultD = new Label();
             lbLine2 = new Label();
+            toolTip1 = new ToolTip(components);
             SuspendLayout();
             // 
             // lbNumerator
@@ -185,5 +187,6 @@
         private Label lbLine;
         private Label lbResultD;
         private Label lbLine2;
+        private ToolTip toolTip1;
     }
 }

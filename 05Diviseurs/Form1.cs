@@ -4,12 +4,13 @@ namespace _05Diviseurs
 {
     public partial class frmDivisor : Form
     {
-        const string ERREURNB1 = "Vous n'avez pas entrez un nombre dans le premier champ";
-        const string ERREURNB2 = "Vous n'avez pas entrez un nombre dans le deuxiéme champ";
+        const string ERREURNB1 = "Vous n'avez pas entrez un nombre entier dans le premier champ";
+        const string ERREURNB2 = "Vous n'avez pas entrez un nombre entier dans le deuxiéme champ";
         const string MESSAGE2 = "Le denominateur ne peut être 0";
         public frmDivisor()
         {
             InitializeComponent();
+
         }
 
         private void btResult_Click(object sender, EventArgs e)
@@ -49,16 +50,24 @@ namespace _05Diviseurs
                 var c = 1;
                 var a = nb1;
                 var b = nb2;
+                
 
                 while (c != 0)
                 {
                     c = a % b;
                     a = b;
                     b = c;
+                    
                 }
 
                 nb1 = nb1 / a;
                 nb2 = nb2 / a;
+                ToolTip toolResultD = new ToolTip();
+                toolTip1.ShowAlways = true;
+                toolTip1.SetToolTip(lbResultD, a.ToString());
+                ToolTip toolResultN = new ToolTip();
+                toolTip1.ShowAlways = true;
+                toolTip1.SetToolTip(lbResultN, a.ToString());
             }
             lbResultN.Text = nb1.ToString();
             lbResultD.Text = nb2.ToString();
