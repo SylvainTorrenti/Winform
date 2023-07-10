@@ -59,7 +59,7 @@ namespace _05Diviseurs
                     b = c;
                     
                 }
-
+                
                 nb1 = nb1 / a;
                 nb2 = nb2 / a;
                 ToolTip toolResultD = new ToolTip();
