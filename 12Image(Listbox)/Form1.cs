@@ -9,6 +9,7 @@ namespace _12Image_Listbox_
             InitializeComponent();
         }
 
+        #region Btn Image
         private void btImage_Click(object sender, EventArgs e)
         {
             var fileContent = string.Empty;
@@ -29,20 +30,27 @@ namespace _12Image_Listbox_
                 }
             }
         }
+        #endregion
 
+        #region Btn Add
         private void btAdd_Click(object sender, EventArgs e)
         {
             libPath.Items.Add(tbPath.Text);
         }
+        #endregion
+
+        #region Btn Delete
         private void btDelete_Click(object sender, EventArgs e)
         {
             libPath.Items.Remove(libPath.SelectedItem);
         }
+        #endregion
+
+        #region Btn Clear
         private void btClear_Click(object sender, EventArgs e)
         {
             libPath.Items.Clear();
-        }
-
-       
+        } 
+        #endregion
     }
 }

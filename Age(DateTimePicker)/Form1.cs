@@ -6,12 +6,15 @@ namespace Age_DateTimePicker_
 {
     public partial class frmMain : Form
     {
-        const string TITRE = "Age";
+        #region Constante
+        const string TITRE = "Age"; 
+        #endregion
         public frmMain()
         {
             InitializeComponent();
         }
 
+        #region Btn Year
         private void btYear_Click(object sender, EventArgs e)
         {
             var name = tbName.Text;
@@ -28,10 +31,13 @@ namespace Age_DateTimePicker_
             }
             MessageBox.Show("bonjour " + name + ", vous avez " + year + " ans", TITRE, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        #endregion
 
+        #region Btn Cancel
         private void btCancel_Click(object sender, EventArgs e)
         {
             Close();
-        }
+        } 
+        #endregion
     }
 }

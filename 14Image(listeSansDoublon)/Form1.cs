@@ -10,6 +10,7 @@ namespace _14Image_listeSansDoublon_
             InitializeComponent();
         }
 
+        #region Btn Image
         private void btImage_Click(object sender, EventArgs e)
         {
             var fileContent = string.Empty;
@@ -41,7 +42,9 @@ namespace _14Image_listeSansDoublon_
                 }
             }
         }
+        #endregion
 
+        #region Btn Add
         private void btAdd_Click(object sender, EventArgs e)
         {
             libPath.Items.Add(tbPath.Text);
@@ -49,7 +52,9 @@ namespace _14Image_listeSansDoublon_
             btClear.Enabled = true;
             btAdd.Enabled = false;
         }
+        #endregion
 
+        #region Btn Delete
         private void btDelete_Click(object sender, EventArgs e)
         {
             libPath.Items.Remove(libPath.SelectedItem);
@@ -59,16 +64,21 @@ namespace _14Image_listeSansDoublon_
                 btClear.Enabled = false;
             }
         }
+        #endregion
 
+        #region Btn Clear
         private void btClear_Click(object sender, EventArgs e)
         {
             libPath.Items.Clear();
             btClear.Enabled = false;
         }
+        #endregion
 
+        #region Lib Path
         private void libPath_SelectedIndexChanged(object sender, EventArgs e)
         {
             btDelete.Enabled = true;
-        }
+        } 
+        #endregion
     }
 }

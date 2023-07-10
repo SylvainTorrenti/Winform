@@ -8,6 +8,7 @@ namespace _03Calculs
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
+            #region Tool tip
             ToolTip tpReset = new ToolTip();
             tpReset.AutoPopDelay = 0;
             tpReset.InitialDelay = 0;
@@ -41,11 +42,13 @@ namespace _03Calculs
             tbResult.InitialDelay = 0;
             tbResult.ReshowDelay = 0;
             tbResult.ShowAlways = true;
-            tbResult.SetToolTip(this.tbResult, "Le resultat");
+            tbResult.SetToolTip(this.tbResult, "Le resultat"); 
+            #endregion
 
 
         }
 
+        #region btn Egal
         private void btEgal_Click(object sender, EventArgs e)
         {
             int nb1 = int.Parse(tbNb1.Text);
@@ -54,7 +57,9 @@ namespace _03Calculs
 
             tbResult.Text = result.ToString();
         }
+        #endregion
 
+        #region btn Reset
         private void btReset_Click(object sender, EventArgs e)
         {
 
@@ -62,7 +67,8 @@ namespace _03Calculs
             tbNb2.Clear();
             tbResult.Clear();
             tbNb1.Focus();
-        }
+        } 
+        #endregion
 
 
 

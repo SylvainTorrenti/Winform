@@ -7,10 +7,13 @@ namespace _01HelloWorld
             InitializeComponent();
         }
 
+        #region Button Exit
         private void btExit_Click(object sender, EventArgs e)
         {
-                this.Close();    
+            this.Close();
         }
+        #endregion
+        #region Exit
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             const string message = "Confirmez vous la fermeture de l'application ?";
@@ -23,6 +26,7 @@ namespace _01HelloWorld
             {
                 e.Cancel = true;
             }
-        }
+        } 
+        #endregion
     }
 }

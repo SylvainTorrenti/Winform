@@ -17,16 +17,20 @@ namespace _02FenetreModale
             InitializeComponent();
         }
 
+        #region Btn Yes
         private void btYes_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             this.Close();
         }
+        #endregion
 
+        #region Btn Cancel 
         private void btCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             this.Close();
-        }
+        } 
+        #endregion
     }
 }

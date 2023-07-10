@@ -7,6 +7,7 @@ namespace _02FenetreModale
             InitializeComponent();
         }
 
+        #region Frm Fille
         private void btFrmFille_Click(object sender, EventArgs e)
         {
             using frmFille frmFille = new frmFille(); // remplace le dispose()
@@ -22,6 +23,7 @@ namespace _02FenetreModale
                 this.tbTitle.Text = string.Empty;
             }
 
-        }
+        } 
+        #endregion
     }
 }

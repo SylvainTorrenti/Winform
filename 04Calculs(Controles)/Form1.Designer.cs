@@ -118,7 +118,6 @@
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calcul";
-            Load += frmMain_Load;
             ResumeLayout(false);
             PerformLayout();
         }

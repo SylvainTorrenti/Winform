@@ -7,6 +7,7 @@ namespace _11Image
             InitializeComponent();
         }
 
+        #region Btn Search
         private void btSearch_Click(object sender, EventArgs e)
         {
             var fileContent = string.Empty;
@@ -27,6 +28,7 @@ namespace _11Image
                 }
             }
 
-        }
+        } 
+        #endregion
     }
 }

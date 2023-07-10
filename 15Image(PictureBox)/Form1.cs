@@ -7,6 +7,7 @@ namespace _15Image_PictureBox_
             InitializeComponent();
         }
 
+        #region Btn Image
         private void btImage_Click(object sender, EventArgs e)
         {
             var fileContent = string.Empty;
@@ -38,7 +39,9 @@ namespace _15Image_PictureBox_
                 }
             }
         }
+        #endregion
 
+        #region Btn Add
         private void btAdd_Click(object sender, EventArgs e)
         {
             libPath.Items.Add(tbPath.Text);
@@ -46,7 +49,9 @@ namespace _15Image_PictureBox_
             btClear.Enabled = true;
             btAdd.Enabled = false;
         }
+        #endregion
 
+        #region Btn Delete
         private void btDelete_Click(object sender, EventArgs e)
         {
             libPath.Items.Remove(libPath.SelectedItem);
@@ -56,18 +61,23 @@ namespace _15Image_PictureBox_
                 btClear.Enabled = false;
             }
         }
+        #endregion
 
+        #region Btn Clear
         private void btClear_Click(object sender, EventArgs e)
         {
             libPath.Items.Clear();
             btClear.Enabled = false;
         }
+        #endregion
 
+        #region Lib path
         private void libPath_SelectedIndexChanged(object sender, EventArgs e)
         {
             btDelete.Enabled = true;
             pbImage.Load(libPath.SelectedItem.ToString());
-        }
+        } 
+        #endregion
 
     }
 }

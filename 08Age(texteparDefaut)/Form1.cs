@@ -4,11 +4,14 @@ namespace _08Age_texteparDefaut_
 {
     public partial class Form1 : Form
     {
-        const string TITRE = "Age";
+        #region Constante
+        const string TITRE = "Age"; 
+        #endregion
         public Form1()
         {
             InitializeComponent();
         }
+        #region Visible
         private void visible()
         {
             var regex = new Regex("^[0-9]{1,2}\\/[0-9]{1,2}\\/[0-9]{4}$");
@@ -25,7 +28,9 @@ namespace _08Age_texteparDefaut_
                 }
             }
         }
+        #endregion
 
+        #region Btn Year
         private void btYear_Click(object sender, EventArgs e)
         {
             var name = tbName.Text;
@@ -38,20 +43,27 @@ namespace _08Age_texteparDefaut_
             }
             MessageBox.Show("bonjour " + name + ", vous avez " + year + " ans", TITRE, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        #endregion
 
+        #region Tb Name
         private void tbName_TextChanged(object sender, EventArgs e)
         {
             visible();
         }
+        #endregion
 
+        #region Tb Birthday
         private void tbBirthday_TextChanged(object sender, EventArgs e)
         {
             visible();
         }
+        #endregion
 
+        #region Btn Close
         private void btClose_Click(object sender, EventArgs e)
         {
             Close();
-        }
+        } 
+        #endregion
     }
 }

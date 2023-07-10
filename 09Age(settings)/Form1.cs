@@ -4,16 +4,22 @@ namespace _09Age_settings_
 {
     public partial class frmMain : Form
     {
-        const string TITRE = "Age";
+        #region Constante
+        const string TITRE = "Age"; 
+        #endregion
         public frmMain()
         {
             InitializeComponent();
         }
+        #region Form load
         private void Form1_Load(object sender, EventArgs e)
         {
             this.tbBirthday.Text = Properties.Settings.Default.DtNaiss;
             this.tbName.Text = Properties.Settings.Default.Nom;
         }
+        #endregion
+
+        #region Visible
         private void visible()
         {
             var regex = new Regex("^[0-9]{1,2}\\/[0-9]{1,2}\\/[0-9]{4}$");
@@ -30,7 +36,9 @@ namespace _09Age_settings_
                 }
             }
         }
+        #endregion
 
+        #region Btn Year
         private void btYear_Click(object sender, EventArgs e)
         {
             var name = tbName.Text;
@@ -43,28 +51,37 @@ namespace _09Age_settings_
             }
             MessageBox.Show("bonjour " + name + ", vous avez " + year + " ans", TITRE, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        #endregion
 
+        #region Tb Name
         private void tbName_TextChanged(object sender, EventArgs e)
         {
             visible();
         }
+        #endregion
 
+        #region Tb Birthday
         private void tbBirthday_TextChanged(object sender, EventArgs e)
         {
             visible();
         }
+        #endregion
 
+        #region Btn Close
         private void btClose_Click(object sender, EventArgs e)
         {
 
             this.Close();
         }
+        #endregion
 
+        #region Form Close
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Properties.Settings.Default.Nom = tbName.Text;
             Properties.Settings.Default.DtNaiss = tbBirthday.Text;
             Properties.Settings.Default.Save();
-        }
+        } 
+        #endregion
     }
 }

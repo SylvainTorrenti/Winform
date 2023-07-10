@@ -3,13 +3,16 @@ namespace _06Age
     public partial class frmMain : Form
     {
 
-        const string TITRE = "Age";
+        #region Constante
+        const string TITRE = "Age"; 
+        #endregion
 
         public frmMain()
         {
             InitializeComponent();
         }
 
+        #region Btn Calcul
         private void btCalcul_Click(object sender, EventArgs e)
         {
             var name = tbName.Text;
@@ -22,10 +25,13 @@ namespace _06Age
             }
             MessageBox.Show("bonjour " + name + ", vous avez " + year + " ans", TITRE, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        #endregion
 
+        #region Btn Close
         private void btClose_Click(object sender, EventArgs e)
         {
             Close();
-        }
+        } 
+        #endregion
     }
 }

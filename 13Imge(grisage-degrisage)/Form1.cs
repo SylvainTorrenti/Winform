@@ -6,7 +6,8 @@ namespace _13Imge_grisage_degrisage_
         {
             InitializeComponent();
         }
-        
+
+        #region Btn Image
         private void btImage_Click(object sender, EventArgs e)
         {
             var fileContent = string.Empty;
@@ -28,7 +29,9 @@ namespace _13Imge_grisage_degrisage_
                 }
             }
         }
+        #endregion
 
+        #region Btn Add
         private void btAdd_Click(object sender, EventArgs e)
         {
             libPath.Items.Add(tbPath.Text);
@@ -36,7 +39,9 @@ namespace _13Imge_grisage_degrisage_
             btClear.Enabled = true;
             btAdd.Enabled = false;
         }
+        #endregion
 
+        #region Btn Delete
         private void btDelete_Click(object sender, EventArgs e)
         {
             libPath.Items.Remove(libPath.SelectedItem);
@@ -46,16 +51,21 @@ namespace _13Imge_grisage_degrisage_
                 btClear.Enabled = false;
             }
         }
+        #endregion
 
+        #region Btn Clear
         private void btClear_Click(object sender, EventArgs e)
         {
             libPath.Items.Clear();
             btClear.Enabled = false;
         }
+        #endregion
 
+        #region Lib Path
         private void libPath_SelectedIndexChanged(object sender, EventArgs e)
         {
             btDelete.Enabled = true;
-        }
+        } 
+        #endregion
     }
 }
