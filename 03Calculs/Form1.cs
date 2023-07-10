@@ -49,6 +49,11 @@ namespace _03Calculs
         }
 
         #region btn Egal
+        /// <summary>
+        /// Quand on click qur le bouton egal
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btEgal_Click(object sender, EventArgs e)
         {
             int nb1 = int.Parse(tbNb1.Text);
@@ -60,6 +65,11 @@ namespace _03Calculs
         #endregion
 
         #region btn Reset
+        /// <summary>
+        /// Quand on click sur le bouton reset
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btReset_Click(object sender, EventArgs e)
         {
 

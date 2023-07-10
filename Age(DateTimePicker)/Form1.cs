@@ -15,6 +15,12 @@ namespace Age_DateTimePicker_
         }
 
         #region Btn Year
+        /// <summary>
+        /// Calcul l'age de la personne en fonction de sa date de naissance
+        /// Verifie aussi le jour et le mois pour eviter les incohérences
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btYear_Click(object sender, EventArgs e)
         {
             var name = tbName.Text;
@@ -34,6 +40,11 @@ namespace Age_DateTimePicker_
         #endregion
 
         #region Btn Cancel
+        /// <summary>
+        /// Ferme la fenêtre
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btCancel_Click(object sender, EventArgs e)
         {
             Close();

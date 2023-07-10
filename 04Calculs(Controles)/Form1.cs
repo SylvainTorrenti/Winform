@@ -8,6 +8,12 @@ namespace _04Calculs_Controles_
         }
 
         #region Btn Result
+        /// <summary>
+        /// Quand on click sur le bouton result
+        /// Verifie que les données entrées sont bonnes et si elles le sont fait le calcul
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btResult_Click(object sender, EventArgs e)
         {
             int nb1;
@@ -44,6 +50,11 @@ namespace _04Calculs_Controles_
         #endregion
 
         #region Btn Reset
+        /// <summary>
+        /// Reset tout les champs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btReset_Click(object sender, EventArgs e)
         {
             tbNb1.Clear();
@@ -54,6 +65,11 @@ namespace _04Calculs_Controles_
         #endregion
 
         #region Tb Nb1 Enter
+        /// <summary>
+        /// Reset le champ resultat dés que l'on entre dans la text box 1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbNb1_Enter(object sender, EventArgs e)
         {
             tbResult.Clear();
@@ -61,6 +77,11 @@ namespace _04Calculs_Controles_
         #endregion
 
         #region Tb Nb2 Enter
+        /// <summary>
+        /// Reset le champ resultat dés que l'on entre dans la text box 2
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbNb2_Enter(object sender, EventArgs e)
         {
             tbResult.Clear();
@@ -68,6 +89,12 @@ namespace _04Calculs_Controles_
         #endregion
 
         #region Tb Nb1 Key Press
+        /// <summary>
+        /// Remplace '.' par ',' et empêche d'en entrée plusieurs dans la text box 1
+        /// Empêche l'utilisateur de rentrer autre chose que des nombres
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbNb1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == '.')
@@ -86,6 +113,12 @@ namespace _04Calculs_Controles_
         #endregion
 
         #region Tb Nb2 Key Press
+        /// <summary>
+        /// Remplace '.' par ',' et empêche d'en entrée plusieurs dans la text box 2
+        /// Empêche l'utilisateur de rentrer autre chose que des nombres
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbNb2_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == '.')

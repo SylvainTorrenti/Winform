@@ -12,6 +12,11 @@ namespace _09Age_settings_
             InitializeComponent();
         }
         #region Form load
+        /// <summary>
+        /// Charge les Setting enregistrer lors de la precedente fermeture
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
             this.tbBirthday.Text = Properties.Settings.Default.DtNaiss;
@@ -20,6 +25,9 @@ namespace _09Age_settings_
         #endregion
 
         #region Visible
+        /// <summary>
+        /// Definit la visibilité du bouton Year grace a une Regex qui verifie si ce qui est entré correspond à un format de date
+        /// </summary>
         private void visible()
         {
             var regex = new Regex("^[0-9]{1,2}\\/[0-9]{1,2}\\/[0-9]{4}$");
@@ -39,6 +47,12 @@ namespace _09Age_settings_
         #endregion
 
         #region Btn Year
+        /// <summary>
+        /// Calcul l'age de la personne en fonction de sa date de naissance
+        /// Verifie aussi le jour et le mois pour eviter les incohérences
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btYear_Click(object sender, EventArgs e)
         {
             var name = tbName.Text;
@@ -54,6 +68,11 @@ namespace _09Age_settings_
         #endregion
 
         #region Tb Name
+        /// <summary>
+        /// appel la fonction visible pour verifier si le bouton Year dois être grisé au non
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbName_TextChanged(object sender, EventArgs e)
         {
             visible();
@@ -61,6 +80,11 @@ namespace _09Age_settings_
         #endregion
 
         #region Tb Birthday
+        /// <summary>
+        /// appel la fonction visible pour verifier si le bouton Year dois être grisé au non
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbBirthday_TextChanged(object sender, EventArgs e)
         {
             visible();
@@ -68,6 +92,11 @@ namespace _09Age_settings_
         #endregion
 
         #region Btn Close
+        /// <summary>
+        /// Ferme la fenêtre
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btClose_Click(object sender, EventArgs e)
         {
 
@@ -76,6 +105,11 @@ namespace _09Age_settings_
         #endregion
 
         #region Form Close
+        /// <summary>
+        /// Enregistre les Settings entré
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Properties.Settings.Default.Nom = tbName.Text;

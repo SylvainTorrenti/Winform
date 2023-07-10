@@ -8,6 +8,12 @@ namespace _11Image
         }
 
         #region Btn Search
+        /// <summary>
+        /// Permet de chercher les fichier qui ont l'extension que nous lui indiquons avec 'openFileDialog.Filter'
+        /// Affiche le chemin dans la Textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btSearch_Click(object sender, EventArgs e)
         {
             var fileContent = string.Empty;
@@ -22,7 +28,7 @@ namespace _11Image
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    //Get the path of specified file
+                    
                     filePath = openFileDialog.FileName;
                     tbPath.Text = filePath;
                 }

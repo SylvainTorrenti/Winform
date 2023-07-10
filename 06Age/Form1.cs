@@ -13,6 +13,12 @@ namespace _06Age
         }
 
         #region Btn Calcul
+        /// <summary>
+        /// Calcul l'age de la personne en fonction de sa date de naissance
+        /// Verifie aussi le jour et le mois pour eviter les incohérences
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btCalcul_Click(object sender, EventArgs e)
         {
             var name = tbName.Text;
@@ -28,6 +34,11 @@ namespace _06Age
         #endregion
 
         #region Btn Close
+        /// <summary>
+        /// Ferme la fenêtre
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btClose_Click(object sender, EventArgs e)
         {
             Close();

@@ -18,6 +18,11 @@ namespace _02FenetreModale
         }
 
         #region Btn Yes
+        /// <summary>
+        /// Quand on appuie sur le bouton yes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btYes_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
@@ -26,6 +31,11 @@ namespace _02FenetreModale
         #endregion
 
         #region Btn Cancel 
+        /// <summary>
+        /// Quand on appuie sur le bouton cancel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;

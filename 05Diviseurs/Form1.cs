@@ -16,12 +16,21 @@ namespace _05Diviseurs
         }
 
         #region Btn Result
+        /// <summary>
+        /// Utilise la fonction divisor() au click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btResult_Click(object sender, EventArgs e)
         {
             divisor();
         }
         #endregion
         #region Diviseur
+        /// <summary>
+        /// Permet d'obtenir de PGCD et ainsi indiquer une fraction irréductible.
+        /// Pour voir TOUT les diviseur se référé à la correction
+        /// </summary>
         private void divisor()
         {
             int nb1;

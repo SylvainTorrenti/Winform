@@ -8,6 +8,11 @@ namespace _02FenetreModale
         }
 
         #region Frm Fille
+        /// <summary>
+        /// Quand on appuie sur le bouton pour faire apparaitre la fenêtre fille
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btFrmFille_Click(object sender, EventArgs e)
         {
             using frmFille frmFille = new frmFille(); // remplace le dispose()
