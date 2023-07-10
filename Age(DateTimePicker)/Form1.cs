@@ -1,5 +1,6 @@
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace Age_DateTimePicker_
 {
@@ -14,8 +15,18 @@ namespace Age_DateTimePicker_
         private void btYear_Click(object sender, EventArgs e)
         {
             var name = tbName.Text;
-            int years = DateTime.Now.Year - dtpYear.Value.Year;
-            MessageBox.Show("bonjour " + name + ", vous avez " + years + " ans", TITRE, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            var today = DateTime.Today;
+            int year = DateTime.Now.Year - dtpYear.Value.Year;
+            if (birthday.Day > today.Day && birthday.Month == today.Month)
+            {
+                year = year - 1;
+            }
+            if (birthday.Month > today.Month)
+            {
+                year = year - 1;
+
+            }
+            MessageBox.Show("bonjour " + name + ", vous avez " + year + " ans", TITRE, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

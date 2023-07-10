@@ -37,6 +37,15 @@ namespace _09Age_settings_
             var today = DateTime.Today;
             var birthday = Convert.ToDateTime(tbBirthday.Text);
             var year = today.Year - birthday.Year;
+            if (birthday.Day > today.Day && birthday.Month == today.Month)
+            {
+                year = year - 1;
+            }
+            if (birthday.Month > today.Month)
+            {
+                year = year - 1;
+
+            }
             MessageBox.Show("bonjour " + name + ", vous avez " + year + " ans", TITRE, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
