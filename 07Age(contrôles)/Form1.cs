@@ -53,5 +53,10 @@ namespace _07Age_contrôles_
         {
             visible();
         }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

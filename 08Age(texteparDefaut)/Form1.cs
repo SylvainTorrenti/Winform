@@ -53,5 +53,10 @@ namespace _08Age_texteparDefaut_
         {
             visible();
         }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

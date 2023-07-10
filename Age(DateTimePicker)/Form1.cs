@@ -17,16 +17,21 @@ namespace Age_DateTimePicker_
             var name = tbName.Text;
             var today = DateTime.Today;
             int year = DateTime.Now.Year - dtpYear.Value.Year;
-            if (birthday.Day > today.Day && birthday.Month == today.Month)
+            if (dtpYear.Value.Day > today.Day && dtpYear.Value.Month == today.Month)
             {
                 year = year - 1;
             }
-            if (birthday.Month > today.Month)
+            if (dtpYear.Value.Month > today.Month)
             {
                 year = year - 1;
 
             }
             MessageBox.Show("bonjour " + name + ", vous avez " + year + " ans", TITRE, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -83,6 +83,7 @@
             btCancel.Text = "Fermer";
             btCancel.TextAlign = ContentAlignment.MiddleRight;
             btCancel.UseVisualStyleBackColor = true;
+            btCancel.Click += btCancel_Click;
             // 
             // btYear
             // 

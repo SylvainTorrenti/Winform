@@ -85,6 +85,7 @@
             btClose.Text = "Fermer";
             btClose.TextAlign = ContentAlignment.MiddleRight;
             btClose.UseVisualStyleBackColor = true;
+            btClose.Click += btClose_Click;
             // 
             // btYear
             // 

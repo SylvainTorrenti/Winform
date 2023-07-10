@@ -23,10 +23,14 @@ namespace _06Age
             if (birthday.Month > today.Month)
             {
                 year = year - 1;
-                
+
             }
             MessageBox.Show("bonjour " + name + ", vous avez " + year + " ans", TITRE, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

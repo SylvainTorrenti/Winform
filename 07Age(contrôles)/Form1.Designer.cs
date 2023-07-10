@@ -82,6 +82,7 @@
             btClose.TabIndex = 4;
             btClose.Text = "Fermer";
             btClose.UseVisualStyleBackColor = true;
+            btClose.Click += btClose_Click;
             // 
             // btYear
             // 
