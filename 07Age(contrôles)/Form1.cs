@@ -5,7 +5,8 @@ namespace _07Age_contrôles_
     public partial class Form1 : Form
     {
         #region Constante
-        const string TITRE = "Age"; 
+        private const String MESSAGE = "Bonjour {0}, vous avez {1} ans";
+        private const String TITRE = "Age";
         #endregion
         public Form1()
         {
@@ -17,18 +18,19 @@ namespace _07Age_contrôles_
         /// </summary>
         private void visible()
         {
-            var regex = new Regex("^[0-9]{1,2}\\/[0-9]{1,2}\\/[0-9]{4}$");
-            if ((tbName.Text != "") && (tbBirthday.Text != ""))
-            {
-                if (regex.IsMatch(tbBirthday.Text))
-                {
-                    int result = DateTime.Compare(Convert.ToDateTime(tbBirthday.Text), DateTime.Now);
-                    if (result < 0)
-                    {
+            DateTime dtNaiss;
 
-                        btYear.Enabled = true;
-                    }
-                }
+            // On teste que les champs soient renseignés et que la date de naissance soit valide et antérieure à la date du jour
+            if (String.IsNullOrWhiteSpace(tbName.Text) ||
+                String.IsNullOrWhiteSpace(tbBirthday.Text) ||
+                !DateTime.TryParse(tbBirthday.Text, out dtNaiss) ||
+                dtNaiss >= DateTime.Today)
+            {
+                btYear.Enabled = false;
+            }
+            else
+            {
+                btYear.Enabled = true;
             }
         }
         #endregion
@@ -42,16 +44,22 @@ namespace _07Age_contrôles_
         /// <param name="e"></param>
         private void btYear_Click(object sender, EventArgs e)
         {
-            var name = tbName.Text;
-            var today = DateTime.Today;
-            var birthday = Convert.ToDateTime(tbBirthday.Text);
-            var year = today.Year - birthday.Year;
-            if ((birthday.Day > today.Day && birthday.Month == today.Month) || birthday.Month > today.Month)
+            DateTime dtNaiss;
+            DateTime dtJour;
+            long nbAns;
+
+            //Calcule de l'age
+            dtNaiss = DateTime.Parse(tbBirthday.Text);
+            dtJour = DateTime.Today;
+            nbAns = dtJour.Year - dtNaiss.Year;
+
+            if ((dtNaiss.Month > dtJour.Month) || (dtNaiss.Month == dtJour.Month && dtNaiss.Day > dtJour.Day))
             {
-                year--;
+                nbAns--;
             }
 
-            MessageBox.Show("bonjour " + name + ", vous avez " + year + " ans", TITRE, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //Affichage de l'age
+            MessageBox.Show(String.Format(MESSAGE, tbName.Text, nbAns), TITRE, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 
@@ -88,7 +96,7 @@ namespace _07Age_contrôles_
         private void btClose_Click(object sender, EventArgs e)
         {
             Close();
-        } 
+        }
         #endregion
     }
 }
