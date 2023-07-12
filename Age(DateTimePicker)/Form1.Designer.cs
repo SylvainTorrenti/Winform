@@ -65,8 +65,9 @@
             // 
             // dtpYear
             // 
+            dtpYear.Format = DateTimePickerFormat.Short;
             dtpYear.Location = new Point(222, 53);
-            dtpYear.MaxDate = new DateTime(2023, 7, 5, 0, 0, 0, 0);
+            dtpYear.MaxDate = new DateTime(2030, 11, 15, 0, 0, 0, 0);
             dtpYear.Name = "dtpYear";
             dtpYear.Size = new Size(253, 23);
             dtpYear.TabIndex = 3;
@@ -113,6 +114,8 @@
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Age";
+            FormClosed += frmMain_FormClosed;
+            Load += frmMain_Load;
             ResumeLayout(false);
             PerformLayout();
         }

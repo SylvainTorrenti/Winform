@@ -7,11 +7,17 @@ namespace Age_DateTimePicker_
     public partial class frmMain : Form
     {
         #region Constante
-        const string TITRE = "Age"; 
+        const string TITRE = "Age";
         #endregion
         public frmMain()
         {
             InitializeComponent();
+        }
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            this.tbName.Text = Properties.Settings.Default.Name;
+            this.dtpYear.Value = Properties.Settings.Default.Date;
+            this.dtpYear.MaxDate = DateTime.Now;
         }
 
         #region Btn Year
@@ -48,7 +54,16 @@ namespace Age_DateTimePicker_
         private void btCancel_Click(object sender, EventArgs e)
         {
             Close();
-        } 
+        }
         #endregion
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Properties.Settings.Default.Name = tbName.Text;
+            Properties.Settings.Default.Date = dtpYear.Value;
+            Properties.Settings.Default.Save();
+        }
+
+
     }
 }
