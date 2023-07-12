@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             lbl1 = new Label();
             lbl2 = new Label();
             lbl3 = new Label();
@@ -159,10 +160,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(230, 143);
             Controls.Add(tlp1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(246, 182);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Maquette";
             tlp1.ResumeLayout(false);
             tlp1.PerformLayout();
             ResumeLayout(false);
