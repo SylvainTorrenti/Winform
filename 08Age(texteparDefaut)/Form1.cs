@@ -5,7 +5,7 @@ namespace _08Age_texteparDefaut_
     public partial class Form1 : Form
     {
         #region Constante
-        const string TITRE = "Age"; 
+        const string TITRE = "Age";
         #endregion
         public Form1()
         {
@@ -88,7 +88,7 @@ namespace _08Age_texteparDefaut_
         private void btClose_Click(object sender, EventArgs e)
         {
             Close();
-        } 
+        }
         #endregion
     }
 }

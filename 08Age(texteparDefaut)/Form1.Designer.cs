@@ -124,9 +124,9 @@
 
         private Label lbName;
         private Label lbBirthday;
-        private TextBox tbName;
         private TextBox tbBirthday;
         private Button btClose;
         private Button btYear;
+        internal TextBox tbName;
     }
 }
