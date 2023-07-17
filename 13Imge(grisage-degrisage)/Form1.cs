@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace _13Imge_grisage_degrisage_
 {
     public partial class frmMain : Form
@@ -5,7 +7,14 @@ namespace _13Imge_grisage_degrisage_
         public frmMain()
         {
             InitializeComponent();
+            // Verifie si le fichier existe et le charge si c'est le cas, rend egalement le bouton vider disponible à l'ouverture de l'application
+            if (File.Exists($"{Path.GetTempPath()}\\images.txt"))
+            {
+                LoadFromDisk();
+                btClear.Enabled = true;
+            }
         }
+
 
         #region Btn Image
         /// <summary>
@@ -102,5 +111,59 @@ namespace _13Imge_grisage_degrisage_
             btDelete.Enabled = true;
         }
         #endregion
+
+        #region Form Closed
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Verifie si il y au moins 1 item dans la list box et l'enregistre
+            if (libPath.Items.Count > 0 )
+            {
+            SaveToDisk();
+
+            }
+            //Si la liste box est vide suprimme le fichier
+            else
+            {
+                File.Delete($"{Path.GetTempPath()}\\images.txt");
+            }
+        }
+        #endregion
+
+        #region Fonction perso
+        /// <summary>
+        /// Save les item de la list box sur l'ordinateur
+        /// </summary>
+        public void SaveToDisk()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var item in libPath.Items)
+            {
+                sb.AppendLine(item.ToString());
+            }
+
+            File.WriteAllText($"{Path.GetTempPath()}\\images.txt", sb.ToString());
+        }
+        /// <summary>
+        /// Charge le fichier precedement créé pour remplir la list box
+        /// </summary>
+        public void LoadFromDisk()
+        {
+
+
+
+            libPath.Items.Clear();
+
+            var listContent = File.ReadAllLines($"{Path.GetTempPath()}\\images.txt");
+
+            foreach (var line in listContent)
+            {
+                libPath.Items.Add(line);
+            }
+
+        }
+        #endregion
+
+
     }
 }

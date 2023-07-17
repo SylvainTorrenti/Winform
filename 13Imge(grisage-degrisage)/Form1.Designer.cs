@@ -121,6 +121,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMain";
             Text = "Images";
+            FormClosed += frmMain_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }
