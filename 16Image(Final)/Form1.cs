@@ -55,11 +55,15 @@ namespace _15Image_PictureBox_
         /// <param name="e"></param>
         private void btAdd_Click(object sender, EventArgs e)
         {
-            
-            libPath.Items.Add(tbPath.Text);
-            tbPath.Clear();
-            btClear.Enabled = true;
-            btAdd.Enabled = false;
+            if (tbPath.Text.Length > 0)
+            {
+
+                libPath.Items.Add(tbPath.Text);
+                tbPath.Clear();
+                btClear.Enabled = true;
+                btAdd.Enabled = false;
+            }
+
         }
         #endregion
 
@@ -71,8 +75,12 @@ namespace _15Image_PictureBox_
         /// <param name="e"></param>
         private void btDelete_Click(object sender, EventArgs e)
         {
-            libPath.Items.Remove(libPath.SelectedItem);
-            btDelete.Enabled = false;
+            if (libPath.Items != null)
+            {
+
+                libPath.Items.Remove(libPath.SelectedItem);
+                btDelete.Enabled = false;
+            }
             if (libPath.Items.Count == 0)
             {
                 btClear.Enabled = false;

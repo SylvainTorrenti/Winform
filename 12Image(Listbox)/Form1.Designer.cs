@@ -35,6 +35,7 @@
             btAdd = new Button();
             btClear = new Button();
             btDelete = new Button();
+            ofdImage = new OpenFileDialog();
             SuspendLayout();
             // 
             // btImage
@@ -103,6 +104,11 @@
             btDelete.UseVisualStyleBackColor = true;
             btDelete.Click += btDelete_Click;
             // 
+            // ofdImage
+            // 
+            ofdImage.FileName = "openFileDialog1";
+            ofdImage.Filter = "Images(*.jpeg/*.jpg/*.png)|*.jpeg;*.jpg;*.png";
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -130,5 +136,6 @@
         private Button btAdd;
         private Button btClear;
         private Button btDelete;
+        private OpenFileDialog ofdImage;
     }
 }

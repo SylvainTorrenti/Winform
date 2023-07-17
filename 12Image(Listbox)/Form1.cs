@@ -23,16 +23,21 @@ namespace _12Image_Listbox_
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.Filter = "Images(*.jpeg/*.jpg/*.png)|*.jpeg;*.jpg;*.png";
-                openFileDialog.FilterIndex = 2;
-                openFileDialog.RestoreDirectory = true;
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                using (openFileDialog)
                 {
-                    //Get the path of specified file
-                    filePath = openFileDialog.FileName;
-                    tbPath.Text = filePath;
+
+                    openFileDialog.InitialDirectory = "c:\\";
+                    openFileDialog.Filter = "Images(*.jpeg/*.jpg/*.png)|*.jpeg;*.jpg;*.png";
+                    openFileDialog.FilterIndex = 2;
+                    openFileDialog.RestoreDirectory = true;
+
+
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        //Get the path of specified file
+                        filePath = openFileDialog.FileName;
+                        tbPath.Text = filePath;
+                    }
                 }
             }
         }
@@ -46,7 +51,11 @@ namespace _12Image_Listbox_
         /// <param name="e"></param>
         private void btAdd_Click(object sender, EventArgs e)
         {
-            libPath.Items.Add(tbPath.Text);
+            if (tbPath.Text.Length > 0)
+            {
+
+                libPath.Items.Add(tbPath.Text);
+            }
         }
         #endregion
 
@@ -58,7 +67,11 @@ namespace _12Image_Listbox_
         /// <param name="e"></param>
         private void btDelete_Click(object sender, EventArgs e)
         {
-            libPath.Items.Remove(libPath.SelectedItem);
+            if (libPath.Items != null)
+            {
+
+                libPath.Items.Remove(libPath.SelectedItem);
+            }
         }
         #endregion
 
@@ -71,7 +84,7 @@ namespace _12Image_Listbox_
         private void btClear_Click(object sender, EventArgs e)
         {
             libPath.Items.Clear();
-        } 
+        }
         #endregion
     }
 }
