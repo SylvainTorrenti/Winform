@@ -22,5 +22,16 @@ namespace _13Imge_grisage_degrisage_.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection liste {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["liste"]));
+            }
+            set {
+                this["liste"] = value;
+            }
+        }
     }
 }

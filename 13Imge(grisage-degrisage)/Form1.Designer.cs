@@ -122,6 +122,7 @@
             Name = "frmMain";
             Text = "Images";
             FormClosed += frmMain_FormClosed;
+            Load += frmMain_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -130,9 +131,9 @@
 
         private Button btImage;
         private TextBox tbPath;
-        private ListBox libPath;
         private Button btAdd;
         private Button btClear;
         private Button btDelete;
+        internal ListBox libPath;
     }
 }

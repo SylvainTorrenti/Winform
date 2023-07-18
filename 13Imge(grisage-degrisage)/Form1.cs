@@ -1,20 +1,39 @@
+using _13Imge_grisage_degrisage_.Properties;
+using Microsoft.VisualBasic;
+using System.Collections.Specialized;
 using System.Text;
+using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace _13Imge_grisage_degrisage_
 {
     public partial class frmMain : Form
     {
+        #region Iniatialize
         public frmMain()
         {
             InitializeComponent();
-            // Verifie si le fichier existe et le charge si c'est le cas, rend egalement le bouton vider disponible à l'ouverture de l'application
-            if (File.Exists($"{Path.GetTempPath()}\\images.txt"))
+            if (Properties.Settings.Default.liste == null)
             {
-                LoadFromDisk();
+                Properties.Settings.Default.liste = new System.Collections.Specialized.StringCollection();
+            }
+            if (Properties.Settings.Default.liste.Count > 0)
+            {
                 btClear.Enabled = true;
             }
-        }
 
+        }
+        #endregion
+
+        #region Form Load
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            foreach (string item in Properties.Settings.Default.liste)
+            {
+                this.libPath.Items.Add(item);
+            }
+        }
+        #endregion
 
         #region Btn Image
         /// <summary>
@@ -40,7 +59,11 @@ namespace _13Imge_grisage_degrisage_
                     //Get the path of specified file
                     filePath = openFileDialog.FileName;
                     tbPath.Text = filePath;
-                    btAdd.Enabled = true;
+                    if (!(Properties.Settings.Default.liste.Contains(tbPath.Text)) || !(libPath.Items.Contains(tbPath.Text)))
+                    {
+                        btAdd.Enabled = true;
+
+                    }
                 }
             }
         }
@@ -54,14 +77,15 @@ namespace _13Imge_grisage_degrisage_
         /// <param name="e"></param>
         private void btAdd_Click(object sender, EventArgs e)
         {
-            if (tbPath.Text.Length > 0)
+            if ((tbPath.Text.Length > 0) && !(Properties.Settings.Default.liste.Contains(tbPath.Text)))
             {
-
                 libPath.Items.Add(tbPath.Text);
                 tbPath.Clear();
                 btClear.Enabled = true;
                 btAdd.Enabled = false;
+
             }
+
 
         }
         #endregion
@@ -75,10 +99,13 @@ namespace _13Imge_grisage_degrisage_
         private void btDelete_Click(object sender, EventArgs e)
         {
             if (libPath.Items != null)
-            {
-
-                libPath.Items.Remove(libPath.SelectedItem);
+            { 
+                string? tempo = libPath.SelectedItem.ToString();
+                libPath.Items.Remove(tempo);
                 btDelete.Enabled = false;
+                Properties.Settings.Default.liste.Remove(tempo);
+
+
             }
             if (libPath.Items.Count == 0)
             {
@@ -97,7 +124,10 @@ namespace _13Imge_grisage_degrisage_
         {
             libPath.Items.Clear();
             btClear.Enabled = false;
+            Properties.Settings.Default.liste.Clear();
+            Properties.Settings.Default.Save();
         }
+
         #endregion
 
         #region Lib Path
@@ -115,17 +145,14 @@ namespace _13Imge_grisage_degrisage_
         #region Form Closed
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //Verifie si il y au moins 1 item dans la list box et l'enregistre
-            if (libPath.Items.Count > 0 )
+            foreach (var item in libPath.Items)
             {
-            SaveToDisk();
-
+                if (!Properties.Settings.Default.liste.Contains(item.ToString()))
+                {
+                    Properties.Settings.Default.liste.Add(item.ToString());
+                }
             }
-            //Si la liste box est vide suprimme le fichier
-            else
-            {
-                File.Delete($"{Path.GetTempPath()}\\images.txt");
-            }
+                    Properties.Settings.Default.Save();
         }
         #endregion
 
@@ -133,36 +160,38 @@ namespace _13Imge_grisage_degrisage_
         /// <summary>
         /// Save les item de la list box sur l'ordinateur
         /// </summary>
-        public void SaveToDisk()
-        {
-            StringBuilder sb = new StringBuilder();
+        //public void SaveToDisk()
+        //{
+        //    StringBuilder sb = new StringBuilder();
 
-            foreach (var item in libPath.Items)
-            {
-                sb.AppendLine(item.ToString());
-            }
+        //    foreach (var item in libPath.Items)
+        //    {
+        //        sb.AppendLine(item.ToString());
+        //    }
 
-            File.WriteAllText($"{Path.GetTempPath()}\\images.txt", sb.ToString());
-        }
-        /// <summary>
-        /// Charge le fichier precedement créé pour remplir la list box
-        /// </summary>
-        public void LoadFromDisk()
-        {
+        //    File.WriteAllText($"{Path.GetTempPath()}\\images.txt", sb.ToString());
+        //}
+        ///// <summary>
+        ///// Charge le fichier precedement créé pour remplir la list box
+        ///// </summary>
+        //public void LoadFromDisk()
+        //{
 
 
 
-            libPath.Items.Clear();
+        //    libPath.Items.Clear();
 
-            var listContent = File.ReadAllLines($"{Path.GetTempPath()}\\images.txt");
+        //    var listContent = File.ReadAllLines($"{Path.GetTempPath()}\\images.txt");
 
-            foreach (var line in listContent)
-            {
-                libPath.Items.Add(line);
-            }
+        //    foreach (var line in listContent)
+        //    {
+        //        libPath.Items.Add(line);
+        //    }
 
-        }
+        ////}
         #endregion
+
+
 
 
     }
