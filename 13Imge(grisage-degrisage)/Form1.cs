@@ -3,6 +3,7 @@ using Microsoft.VisualBasic;
 using System.Collections.Specialized;
 using System.Text;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 using System.Xml.Linq;
 
 namespace _13Imge_grisage_degrisage_
@@ -28,9 +29,14 @@ namespace _13Imge_grisage_degrisage_
         #region Form Load
         private void frmMain_Load(object sender, EventArgs e)
         {
-            foreach (string item in Properties.Settings.Default.liste)
+            
+            if (Properties.Settings.Default.liste != null)
             {
-                this.libPath.Items.Add(item);
+
+                foreach (string item in Properties.Settings.Default.liste)
+                {
+                    this.libPath.Items.Add(item);
+                }
             }
         }
         #endregion
@@ -56,8 +62,10 @@ namespace _13Imge_grisage_degrisage_
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
+                    
                     //Get the path of specified file
-                    filePath = openFileDialog.FileName;
+                    //filePath = openFileDialog.FileName;
+                     
                     tbPath.Text = filePath;
                     if (!(Properties.Settings.Default.liste.Contains(tbPath.Text)) || !(libPath.Items.Contains(tbPath.Text)))
                     {
@@ -99,7 +107,7 @@ namespace _13Imge_grisage_degrisage_
         private void btDelete_Click(object sender, EventArgs e)
         {
             if (libPath.Items != null)
-            { 
+            {
                 string? tempo = libPath.SelectedItem.ToString();
                 libPath.Items.Remove(tempo);
                 btDelete.Enabled = false;
@@ -152,7 +160,7 @@ namespace _13Imge_grisage_degrisage_
                     Properties.Settings.Default.liste.Add(item.ToString());
                 }
             }
-                    Properties.Settings.Default.Save();
+            Properties.Settings.Default.Save();
         }
         #endregion
 
