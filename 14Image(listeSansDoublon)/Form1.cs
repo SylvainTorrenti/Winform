@@ -1,5 +1,7 @@
+using System.CodeDom.Compiler;
 using System.Reflection.Emit;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 
 namespace _14Image_listeSansDoublon_
 {
@@ -19,8 +21,9 @@ namespace _14Image_listeSansDoublon_
         /// <param name="e"></param>
         private void btImage_Click(object sender, EventArgs e)
         {
-            var fileContent = string.Empty;
-            var filePath = string.Empty;
+            string filePath = string.Empty;
+            string fileName = string.Empty;
+            string tempItemName = string.Empty;
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -33,17 +36,23 @@ namespace _14Image_listeSansDoublon_
                 {
                     //Get the path of specified file
                     filePath = openFileDialog.FileName;
+                    fileName = System.IO.Path.GetFileName(filePath);
                     tbPath.Text = filePath;
-                    if (libPath.Items.Count == 0)
+                    if (tbPath.Text.Length > 0)
                     {
-                        btAdd.Enabled = true;
-                    }
-                    foreach (var item in libPath.Items)
-                    {
-                        if (item.ToString() != filePath)
+                        if (libPath.Items.Count == 0)
                         {
-                            btAdd.Enabled = true;
+                            GestionGrisages();
                         }
+                        foreach (var item in libPath.Items)
+                        {
+                            tempItemName = System.IO.Path.GetFileName(item.ToString());
+                            if ((item.ToString() != filePath) && (fileName != tempItemName))
+                            {
+                                GestionGrisages();
+                            }
+                        }
+
                     }
                 }
             }
@@ -60,12 +69,16 @@ namespace _14Image_listeSansDoublon_
         {
             if (tbPath.Text.Length > 0)
             {
-
+                // Ajout du chemin de l'image dans la lstbxImages
                 libPath.Items.Add(tbPath.Text);
                 tbPath.Clear();
-                btClear.Enabled = true;
-                btAdd.Enabled = false;
+
+                // Appel de la fonction qui gère les grisages
+                GestionGrisages();
             }
+
+
+
         }
         #endregion
 
@@ -77,15 +90,11 @@ namespace _14Image_listeSansDoublon_
         /// <param name="e"></param>
         private void btDelete_Click(object sender, EventArgs e)
         {
-            if (libPath.Items != null)
+            if (libPath.SelectedIndex != -1)
             {
-
-                libPath.Items.Remove(libPath.SelectedItem);
+                // On supprime l'élément sélectionné dans la lstbxImages
+                libPath.Items.RemoveAt(libPath.SelectedIndex);
                 btDelete.Enabled = false;
-            }
-            if (libPath.Items.Count == 0)
-            {
-                btClear.Enabled = false;
             }
         }
         #endregion
@@ -99,7 +108,7 @@ namespace _14Image_listeSansDoublon_
         private void btClear_Click(object sender, EventArgs e)
         {
             libPath.Items.Clear();
-            btClear.Enabled = false;
+            GestionGrisages();
         }
         #endregion
 
@@ -114,5 +123,15 @@ namespace _14Image_listeSansDoublon_
             btDelete.Enabled = true;
         }
         #endregion
+
+        private void GestionGrisages()
+        {
+
+            btAdd.Enabled = (tbPath.Text.Length > 0);
+
+            btDelete.Enabled = (libPath.SelectedIndex != -1);
+
+            btClear.Enabled = (libPath.Items.Count != 0);
+        }
     }
 }
