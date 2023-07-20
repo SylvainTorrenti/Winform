@@ -48,7 +48,6 @@ namespace _15Image_PictureBox_
         /// <param name="e"></param>
         private void btDelete_Click(object sender, EventArgs e)
         {
-            GestionGrisages();
             if (libPath.SelectedIndex != -1)
             {
                 // On supprime l'élément sélectionné dans la libPath
@@ -56,6 +55,7 @@ namespace _15Image_PictureBox_
                 btDelete.Enabled = false;
                 pbImage.Image = null;
             }
+            GestionGrisages();
         }
         #endregion
 
@@ -68,6 +68,7 @@ namespace _15Image_PictureBox_
         private void btClear_Click(object sender, EventArgs e)
         {
             libPath.Items.Clear();
+            pbImage.Image = null;
             GestionGrisages();
         }
         #endregion
@@ -80,12 +81,12 @@ namespace _15Image_PictureBox_
         /// <param name="e"></param>
         private void libPath_SelectedIndexChanged(object sender, EventArgs e)
         {
-            btDelete.Enabled = true;
             if (libPath.SelectedIndex != -1)
             {
 
                 pbImage.Load(libPath.SelectedItem.ToString());
-                
+                btDelete.Enabled = true;
+
             }
         }
         #endregion

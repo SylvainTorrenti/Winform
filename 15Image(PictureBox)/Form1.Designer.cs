@@ -65,7 +65,7 @@
             libPath.Location = new Point(12, 50);
             libPath.Name = "libPath";
             libPath.Size = new Size(613, 169);
-            libPath.TabIndex = 2;
+            libPath.TabIndex = 1;
             libPath.SelectedIndexChanged += libPath_SelectedIndexChanged;
             // 
             // btAdd
