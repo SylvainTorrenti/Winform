@@ -21,41 +21,7 @@ namespace _14Image_listeSansDoublon_
         /// <param name="e"></param>
         private void btImage_Click(object sender, EventArgs e)
         {
-            string filePath = string.Empty;
-            string fileName = string.Empty;
-            string tempItemName = string.Empty;
-
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.Filter = "Images(*.jpeg/*.jpg/*.png)|*.jpeg;*.jpg;*.png";
-                openFileDialog.FilterIndex = 2;
-                openFileDialog.RestoreDirectory = true;
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    //Get the path of specified file
-                    filePath = openFileDialog.FileName;
-                    fileName = System.IO.Path.GetFileName(filePath);
-                    tbPath.Text = filePath;
-                    if (tbPath.Text.Length > 0)
-                    {
-                        if (libPath.Items.Count == 0)
-                        {
-                            GestionGrisages();
-                        }
-                        foreach (var item in libPath.Items)
-                        {
-                            tempItemName = System.IO.Path.GetFileName(item.ToString());
-                            if ((item.ToString() != filePath) && (fileName != tempItemName))
-                            {
-                                GestionGrisages();
-                            }
-                        }
-
-                    }
-                }
-            }
+            Path();
         }
         #endregion
 
@@ -124,6 +90,7 @@ namespace _14Image_listeSansDoublon_
         }
         #endregion
 
+        #region Fonction perso
         private void GestionGrisages()
         {
 
@@ -133,5 +100,45 @@ namespace _14Image_listeSansDoublon_
 
             btClear.Enabled = (libPath.Items.Count != 0);
         }
+
+        private void Path()
+        {
+            string filePath = string.Empty;
+            string fileName = string.Empty;
+            string tempItemName = string.Empty;
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "Images(*.jpeg/*.jpg/*.png)|*.jpeg;*.jpg;*.png";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    filePath = openFileDialog.FileName;
+                    fileName = System.IO.Path.GetFileName(filePath);
+                    tbPath.Text = filePath;
+                    if (tbPath.Text.Length > 0)
+                    {
+                        if (libPath.Items.Count == 0)
+                        {
+                            GestionGrisages();
+                        }
+                        foreach (var item in libPath.Items)
+                        {
+                            tempItemName = System.IO.Path.GetFileName(item.ToString());
+                            if ((item.ToString() != filePath) && (fileName != tempItemName))
+                            {
+                                GestionGrisages();
+                            }
+                        }
+
+                    }
+                }
+            }
+        } 
+        #endregion
     }
 }
